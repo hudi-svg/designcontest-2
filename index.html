@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#101010" />
+  <meta name="description" content="ROA brings workspace services and meeting-room experiences together in one intelligent platform." />
+  <title>ROA — Workspace Intelligence</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'] },
+          colors: { ink: '#101010', paper: '#f4f4f1', mist: '#deded9', electric: '#4b8df8' },
+          boxShadow: { soft: '0 24px 80px rgba(0,0,0,.12)' }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    body { font-family: 'DM Sans', sans-serif; }
+    h1,h2,h3,.display { font-family: 'Manrope', sans-serif; }
+    .grid-lines { background-image: linear-gradient(rgba(255,255,255,.055) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.055) 1px, transparent 1px); background-size: 58px 58px; }
+    .reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s ease, transform .7s ease; }
+    .reveal.is-visible { opacity: 1; transform: translateY(0); }
+    .ui-frame { box-shadow: 0 32px 90px rgba(0,0,0,.24); }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .reveal { opacity: 1; transform: none; transition: none; } }
+  </style>
+</head>
+<body class="bg-paper text-ink antialiased selection:bg-black selection:text-white">
+  <!-- Navigation -->
+  <header class="absolute inset-x-0 top-0 z-50 text-white">
+    <nav class="mx-auto flex max-w-[1440px] items-center justify-between px-5 py-5 sm:px-8 lg:px-14 lg:py-7" aria-label="Main navigation">
+      <a href="#top" class="group flex items-center gap-2" aria-label="ROA home">
+        <span class="display text-[1.8rem] font-extrabold tracking-[-.1em]">ROA<span class="text-white/45">.</span></span>
+        <span class="hidden border-l border-white/20 pl-3 text-[10px] uppercase leading-tight tracking-[.2em] text-white/55 sm:block">Workspace<br>intelligence</span>
+      </a>
+      <div class="hidden items-center gap-8 text-sm text-white/70 md:flex">
+        <a class="transition hover:text-white" href="#platform">Platform</a>
+        <a class="transition hover:text-white" href="#features">Features</a>
+        <a class="transition hover:text-white" href="#how-it-works">How it works</a>
+      </div>
+      <a href="#contact" class="group inline-flex items-center gap-3 rounded-full border border-white/25 px-4 py-2.5 text-sm transition hover:border-white hover:bg-white hover:text-ink sm:px-5">
+        Talk to our team <span aria-hidden="true" class="transition group-hover:translate-x-1">↗</span>
+      </a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <!-- Hero -->
+    <section class="relative isolate overflow-hidden bg-ink text-white">
+      <div class="grid-lines absolute inset-0 -z-10 opacity-60"></div>
+      <div class="absolute -right-40 top-10 -z-10 h-[480px] w-[480px] rounded-full bg-white/[.06] blur-[100px]"></div>
+      <div class="mx-auto grid max-w-[1440px] gap-14 px-5 pb-20 pt-36 sm:px-8 sm:pt-40 lg:grid-cols-[.88fr_1.12fr] lg:items-center lg:gap-12 lg:px-14 lg:pb-28 lg:pt-48">
+        <div class="relative z-10 max-w-2xl">
+          <div class="mb-7 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/[.05] px-3.5 py-2 text-[11px] uppercase tracking-[.18em] text-white/65">
+            <span class="h-1.5 w-1.5 rounded-full bg-emerald-400 shadow-[0_0_12px_#34d399]"></span> Workspace intelligence
+          </div>
+          <h1 class="display max-w-[760px] text-[clamp(3.3rem,7.2vw,6.9rem)] font-semibold leading-[.98] tracking-[-.075em]">Make every<br><span class="text-white/45">room work</span><br>smarter.</h1>
+          <p class="mt-7 max-w-lg text-base leading-7 text-white/60 sm:text-lg sm:leading-8">A more considered way to manage meeting-room experiences and workplace services — all from one intuitive interface.</p>
+          <div class="mt-9 flex flex-wrap items-center gap-3">
+            <a href="#platform" class="group inline-flex items-center gap-4 rounded-full bg-white px-6 py-3.5 text-sm font-semibold text-ink transition hover:bg-neutral-200">Explore the platform <span class="text-lg transition group-hover:translate-x-1">↗</span></a>
+            <a href="#features" class="inline-flex items-center gap-2 rounded-full px-5 py-3.5 text-sm text-white/75 transition hover:text-white"><span class="flex h-7 w-7 items-center justify-center rounded-full border border-white/25 text-xs">↓</span> Discover features</a>
+          </div>
+          <div class="mt-14 flex items-center gap-4 border-t border-white/15 pt-5 text-xs text-white/45">
+            <span class="uppercase tracking-[.17em]">Designed around people</span><span class="h-px w-8 bg-white/25"></span><span>Built for modern workplaces</span>
+          </div>
+        </div>
+        <div class="relative lg:pl-3">
+          <div class="absolute -inset-5 rounded-[2rem] bg-white/[.04] blur-2xl"></div>
+          <div class="ui-frame relative overflow-hidden rounded-[1.3rem] border border-white/15 bg-[#c8c8c8] p-1.5 sm:rounded-[1.7rem] sm:p-2">
+            <img src="assets/roa-product-ui.png" alt="Product interface showing workspace service ordering, beverage categories and room controls" class="block h-auto w-full rounded-[1rem] sm:rounded-[1.3rem]" />
+            <div class="absolute bottom-4 left-4 flex items-center gap-2 rounded-full border border-white/30 bg-black/70 px-3 py-2 text-[10px] text-white backdrop-blur-md sm:bottom-6 sm:left-6 sm:px-4 sm:text-xs">
+              <span class="h-1.5 w-1.5 rounded-full bg-emerald-400"></span> A closer look at the interface
+            </div>
+          </div>
+          <div class="absolute -bottom-5 -left-2 hidden rounded-2xl border border-white/15 bg-[#202020] p-4 shadow-2xl sm:block lg:-left-7">
+            <p class="text-[10px] uppercase tracking-[.18em] text-white/45">One connected experience</p>
+            <p class="mt-1 text-sm font-medium text-white">Room controls <span class="mx-1 text-white/30">/</span> Service</p>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-white/10">
+        <div class="mx-auto flex max-w-[1440px] flex-wrap items-center justify-between gap-3 px-5 py-4 text-[10px] uppercase tracking-[.2em] text-white/35 sm:px-8 lg:px-14">
+          <span>Intuitive by design</span><span>Connected by purpose</span><span>Made for the modern workplace</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Platform intro -->
+    <section id="platform" class="px-5 py-24 sm:px-8 sm:py-32 lg:px-14 lg:py-40">
+      <div class="mx-auto max-w-[1440px]">
+        <div class="grid gap-10 lg:grid-cols-[.7fr_1.3fr] lg:gap-20">
+          <div class="reveal">
+            <p class="mb-5 text-xs font-semibold uppercase tracking-[.2em] text-neutral-500"><span class="mr-2 text-neutral-300">01 /</span> The platform</p>
+            <h2 class="display max-w-md text-4xl font-semibold leading-[1.08] tracking-[-.06em] sm:text-5xl">Less friction.<br>Better flow.</h2>
+          </div>
+          <div class="reveal max-w-3xl lg:pt-9">
+            <p class="text-xl leading-8 tracking-[-.025em] text-neutral-700 sm:text-2xl sm:leading-9">The best workplace technology doesn’t get in the way. It makes the everyday feel effortless.</p>
+            <p class="mt-6 max-w-2xl text-base leading-7 text-neutral-500">ROA brings the room experience and workplace services into a clear, approachable interface. Give people a simpler way to interact with their space, so they can focus on what they came to do.</p>
+            <a href="#features" class="group mt-8 inline-flex items-center gap-3 border-b border-neutral-300 pb-2 text-sm font-semibold transition hover:border-ink">See what’s possible <span class="transition group-hover:translate-x-1">→</span></a>
+          </div>
+        </div>
+        <div class="reveal mt-16 grid gap-px overflow-hidden rounded-2xl border border-neutral-200 bg-neutral-200 md:grid-cols-3">
+          <div class="bg-white p-7 sm:p-9"><span class="text-xs uppercase tracking-[.18em] text-neutral-400">01</span><h3 class="mt-10 text-xl font-semibold tracking-tight">One clear interface</h3><p class="mt-3 text-sm leading-6 text-neutral-500">Bring key room interactions together in an interface designed to feel natural.</p></div>
+          <div class="bg-white p-7 sm:p-9"><span class="text-xs uppercase tracking-[.18em] text-neutral-400">02</span><h3 class="mt-10 text-xl font-semibold tracking-tight">Services within reach</h3><p class="mt-3 text-sm leading-6 text-neutral-500">Make everyday workplace requests straightforward and easy to navigate.</p></div>
+          <div class="bg-white p-7 sm:p-9"><span class="text-xs uppercase tracking-[.18em] text-neutral-400">03</span><h3 class="mt-10 text-xl font-semibold tracking-tight">A calmer experience</h3><p class="mt-3 text-sm leading-6 text-neutral-500">Reduce the small points of friction that interrupt a productive meeting.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section id="features" class="bg-[#e8e8e3] px-5 py-24 sm:px-8 sm:py-32 lg:px-14 lg:py-36">
+      <div class="mx-auto max-w-[1440px]">
+        <div class="flex flex-col justify-between gap-8 md:flex-row md:items-end">
+          <div class="reveal"><p class="mb-5 text-xs font-semibold uppercase tracking-[.2em] text-neutral-500"><span class="mr-2 text-neutral-300">02 /</span> Made for the moment</p><h2 class="display max-w-2xl text-4xl font-semibold leading-[1.06] tracking-[-.06em] sm:text-6xl">Everything you need.<br><span class="text-neutral-400">Nothing in the way.</span></h2></div>
+          <p class="reveal max-w-sm text-sm leading-6 text-neutral-500">A look at the kinds of interactions visible in the product interface — presented simply, with people and usability in mind.</p>
+        </div>
+        <div class="mt-14 grid gap-4 lg:grid-cols-12">
+          <article class="reveal overflow-hidden rounded-2xl bg-white lg:col-span-7">
+            <div class="flex min-h-[260px] flex-col justify-between p-7 sm:min-h-[300px] sm:p-10">
+              <div class="flex items-start justify-between gap-4"><span class="text-xs uppercase tracking-[.18em] text-neutral-400">01 / Service</span><span class="flex h-10 w-10 items-center justify-center rounded-full border border-neutral-200 text-lg">↗</span></div>
+              <div class="max-w-md"><h3 class="display text-3xl font-semibold tracking-[-.05em] sm:text-4xl">A service experience that feels simple.</h3><p class="mt-4 max-w-sm text-sm leading-6 text-neutral-500">Browse available options, make a selection, and see important details at a glance.</p></div>
+            </div>
+            <div class="border-t border-neutral-100 bg-[#f7f7f4] p-4 sm:p-6"><img src="assets/roa-product-ui.png" alt="Product service menu with beverage categories and order cards" class="mx-auto max-h-[360px] w-full rounded-xl object-cover object-center shadow-soft sm:max-h-[430px]" loading="lazy" /></div>
+          </article>
+          <div class="grid gap-4 lg:col-span-5">
+            <article class="reveal flex min-h-[260px] flex-col justify-between rounded-2xl bg-ink p-7 text-white sm:p-9">
+              <div class="flex items-start justify-between"><span class="text-xs uppercase tracking-[.18em] text-white/40">02 / Room controls</span><span class="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 text-lg">↗</span></div>
+              <div><div class="mb-6 flex items-center gap-2"><span class="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-sm">⌘</span><span class="h-px w-8 bg-white/25"></span><span class="flex h-9 w-9 items-center justify-center rounded-full bg-white text-sm text-ink">✓</span></div><h3 class="display text-2xl font-semibold tracking-[-.04em] sm:text-3xl">Your room, within reach.</h3><p class="mt-3 max-w-sm text-sm leading-6 text-white/55">A dedicated place to access room interactions from the product interface.</p></div>
+            </article>
+            <article class="reveal flex min-h-[260px] flex-col justify-between rounded-2xl border border-neutral-300 bg-[#f2f2ee] p-7 sm:p-9">
+              <div class="flex items-start justify-between"><span class="text-xs uppercase tracking-[.18em] text-neutral-400">03 / Thoughtful details</span><span class="flex h-10 w-10 items-center justify-center rounded-full border border-neutral-300 text-lg">↗</span></div>
+              <div><div class="mb-6 flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-emerald-500"></span><span class="text-xs text-neutral-500">Clear information, at a glance</span></div><h3 class="display text-2xl font-semibold tracking-[-.04em] sm:text-3xl">Designed for clarity.</h3><p class="mt-3 max-w-sm text-sm leading-6 text-neutral-500">Visual hierarchy helps people find the information they need without extra effort.</p></div>
+            </article>
+          </div>
+        </div>
+        <p class="mt-4 text-xs leading-5 text-neutral-500">Feature descriptions are based on the supplied screen and should be confirmed against the final product brief before publication.</p>
+      </div>
+    </section>
+
+    <!-- How it works -->
+    <section id="how-it-works" class="px-5 py-24 sm:px-8 sm:py-32 lg:px-14 lg:py-40">
+      <div class="mx-auto max-w-[1440px]">
+        <div class="grid gap-10 lg:grid-cols-[.8fr_1.2fr] lg:gap-20">
+          <div class="reveal"><p class="mb-5 text-xs font-semibold uppercase tracking-[.2em] text-neutral-500"><span class="mr-2 text-neutral-300">03 /</span> A better flow</p><h2 class="display max-w-lg text-4xl font-semibold leading-[1.08] tracking-[-.06em] sm:text-5xl">From room to ready.</h2><p class="mt-6 max-w-md text-base leading-7 text-neutral-500">A good experience is made up of small moments that work together. ROA brings key interactions into one considered space.</p></div>
+          <div class="reveal border-t border-neutral-300">
+            <div class="grid grid-cols-[52px_1fr] gap-5 border-b border-neutral-200 py-7 sm:grid-cols-[72px_1fr] sm:py-9"><span class="display text-2xl tracking-[-.06em] text-neutral-300">01</span><div><h3 class="text-lg font-semibold">Arrive and get oriented</h3><p class="mt-2 max-w-xl text-sm leading-6 text-neutral-500">Start with a clear interface that makes the available options easy to understand.</p></div></div>
+            <div class="grid grid-cols-[52px_1fr] gap-5 border-b border-neutral-200 py-7 sm:grid-cols-[72px_1fr] sm:py-9"><span class="display text-2xl tracking-[-.06em] text-neutral-300">02</span><div><h3 class="text-lg font-semibold">Choose what you need</h3><p class="mt-2 max-w-xl text-sm leading-6 text-neutral-500">Navigate service options and make selections through a straightforward touch interface.</p></div></div>
+            <div class="grid grid-cols-[52px_1fr] gap-5 border-b border-neutral-200 py-7 sm:grid-cols-[72px_1fr] sm:py-9"><span class="display text-2xl tracking-[-.06em] text-neutral-300">03</span><div><h3 class="text-lg font-semibold">Get on with the meeting</h3><p class="mt-2 max-w-xl text-sm leading-6 text-neutral-500">Spend less time navigating workplace tasks and more time focused on people and ideas.</p></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section id="contact" class="px-5 pb-6 sm:px-8 lg:px-14">
+      <div class="relative mx-auto max-w-[1440px] overflow-hidden rounded-[1.5rem] bg-ink px-6 py-16 text-white sm:rounded-[2rem] sm:px-12 sm:py-20 lg:px-16 lg:py-24">
+        <div class="grid-lines absolute inset-0 opacity-40"></div><div class="absolute -right-20 -top-40 h-96 w-96 rounded-full bg-white/[.07] blur-[90px]"></div>
+        <div class="relative grid gap-10 md:grid-cols-[1fr_auto] md:items-end">
+          <div class="reveal"><p class="mb-5 text-xs uppercase tracking-[.2em] text-white/45">Bring your workspace together</p><h2 class="display max-w-3xl text-4xl font-semibold leading-[1.05] tracking-[-.06em] sm:text-6xl">Ready for a better<br>meeting experience?</h2><p class="mt-5 max-w-lg text-base leading-7 text-white/55">Let’s talk about how ROA could fit into your workplace.</p></div>
+          <a href="mailto:hello@roa.solutions?subject=ROA%20Product%20Enquiry" class="group inline-flex w-fit items-center gap-5 rounded-full bg-white px-6 py-4 text-sm font-semibold text-ink transition hover:bg-neutral-200">Talk to our team <span class="text-lg transition group-hover:translate-x-1">↗</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="px-5 pb-7 pt-8 sm:px-8 lg:px-14">
+    <div class="mx-auto flex max-w-[1440px] flex-col justify-between gap-6 border-t border-neutral-200 pt-7 sm:flex-row sm:items-end">
+      <div><a href="#top" class="display text-3xl font-extrabold tracking-[-.1em]">ROA<span class="text-neutral-300">.</span></a><p class="mt-2 text-xs text-neutral-500">Workspace intelligence.</p></div>
+      <div class="flex flex-wrap gap-x-6 gap-y-3 text-xs text-neutral-500"><a class="transition hover:text-ink" href="#platform">Platform</a><a class="transition hover:text-ink" href="#features">Features</a><a class="transition hover:text-ink" href="#how-it-works">How it works</a><a class="transition hover:text-ink" href="#contact">Contact</a></div>
+      <p class="text-xs text-neutral-400">© <span id="year"></span> ROA Solutions. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+  </script>
+</body>
+</html>
